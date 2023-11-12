@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MessageService } from 'primeng/api';
+import { Products } from 'src/app/core/mocks/products';
 
 @Component({
   selector: 'app-product-list',
@@ -7,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent {
 
+  productsList: IProduct[] = Products
 
+  constructor(private messageService: MessageService) { }
 
+  addToCart(name: string) {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: `${name} added to cart`  })
+  }
 }

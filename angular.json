@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fcr-ecommerce-front-angular:build:production"
+              "buildTarget": "fcr-ecommerce-front-angular:build:production"
             },
             "development": {
-              "browserTarget": "fcr-ecommerce-front-angular:build:development"
+              "buildTarget": "fcr-ecommerce-front-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fcr-ecommerce-front-angular:build"
+            "buildTarget": "fcr-ecommerce-front-angular:build"
           }
         },
         "test": {
